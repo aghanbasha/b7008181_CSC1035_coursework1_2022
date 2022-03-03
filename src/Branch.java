@@ -58,9 +58,9 @@ public class Branch extends Sale{
 
     public static void main(String[] args) {
         Branch branch_create = new Branch();
-        branch_create.CreateSale("Newcastle", "34","NE18GD",300000,"2015","January");
+        branch_create.CreateSale("Newcastle", "34","NE18GD",300000,"2013","January");
         branch_create.CreateSale("Newcastle", "87","NE34VJ",180000,"2019","November");
-        branch_create.CreateSale("Newcastle", "91","NE53SI",140000,"2018","February");
+        branch_create.CreateSale("Newcastle", "91","NE53SI",140000,"2019","February");
         branch_create.CreateSale("Durham", "12","DH15SJ",270000,"2014","September");
         branch_create.CreateSale("Durham", "93","DH39OP",10000,"2017","June");
         branch_create.CreateSale("Durham", "7","NE34",500000,"2019","November");
@@ -68,6 +68,7 @@ public class Branch extends Sale{
         branch_create.CreateSale("London", "3","SE29JH",500000,"2016","March");
         branch_create.GreaterThan(200000,"Durham");
         branch_create.GreatestSale("Newcastle");
+        branch_create.SaleAverage("Newcastle", "2019");
     }
 
 
@@ -108,6 +109,34 @@ public class Branch extends Sale{
             System.out.println("This branch does not exist");
         }
 
+    }
+
+    public void SaleAverage(String branch_name, String year){
+        int average_index = 0;
+        int new_value = 0;
+        boolean entered = false;
+        for (int i=0; i<sales_list.size();i++){
+            if (branch_name.equals(sales_list.get(i))){
+                if (sales_list.get(i + 3) == year) {
+                    average_index++;
+                    new_value += sales_value_list.get(i/5);
+                    entered = true;
+                }
+            }
+
+        }
+
+        int average = 0;
+        if (new_value>0){
+            average = new_value/average_index;
+        }
+
+        if (entered == true){
+            System.out.println(branch_name+" have an average sale value of "+average);
+        }
+        else{
+            System.out.println("This branch have no sales");
+        }
     }
 
 }
