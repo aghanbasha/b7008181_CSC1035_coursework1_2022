@@ -89,13 +89,13 @@ public class Branch extends Sale{
     }
 
 
-    public void GreatestSale(String branch_name) {
-        int value_compare = 0;
+    public int GreatestSale(String branch_name) {
+        int input_value = 0;
         int new_value = 0;
         for (int i = 0; i < sales_list.size(); i++) {
             if (branch_name.equals(sales_list.get(i))) {
-                if (value_compare < sales_value_list.get(i / 5)) {
-                    value_compare = sales_value_list.get(i / 5);
+                if (input_value < sales_value_list.get(i / 5)) {
+                    input_value = sales_value_list.get(i / 5);
                     new_value = sales_value_list.get(i / 5);
                 }
             }
@@ -103,15 +103,17 @@ public class Branch extends Sale{
 
         if (new_value > 0){
             System.out.println("The greatest valued house at the "+branch_name+" branch is "+new_value);
+            return new_value;
         }
 
         else {
             System.out.println("This branch does not exist");
+            return 0;
         }
 
     }
 
-    public void SaleAverage(String branch_name, String year){
+    public int SaleAverage(String branch_name, String year){
         int average_index = 0;
         int new_value = 0;
         boolean entered = false;
@@ -133,9 +135,11 @@ public class Branch extends Sale{
 
         if (entered == true){
             System.out.println(branch_name+" have an average sale value of "+average);
+            return average;
         }
         else{
             System.out.println("This branch have no sales");
+            return 0;
         }
     }
 
