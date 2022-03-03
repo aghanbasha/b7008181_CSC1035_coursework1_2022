@@ -67,6 +67,7 @@ public class Branch extends Sale{
         branch_create.CreateSale("London", "77","SE18GF",2000000,"2021","August");
         branch_create.CreateSale("London", "3","SE29JH",500000,"2016","March");
         branch_create.GreaterThan(200000,"Durham");
+        branch_create.GreatestSale("Newcastle");
     }
 
 
@@ -84,6 +85,29 @@ public class Branch extends Sale{
         if (entered==false){
             System.out.println(branch_name+"has no sales greater than"+input_value);
         }
+    }
+
+
+    public void GreatestSale(String branch_name) {
+        int value_compare = 0;
+        int new_value = 0;
+        for (int i = 0; i < sales_list.size(); i++) {
+            if (branch_name.equals(sales_list.get(i))) {
+                if (value_compare < sales_value_list.get(i / 5)) {
+                    value_compare = sales_value_list.get(i / 5);
+                    new_value = sales_value_list.get(i / 5);
+                }
+            }
+        }
+
+        if (new_value > 0){
+            System.out.println("The greatest valued house at the "+branch_name+" branch is "+new_value);
+        }
+
+        else {
+            System.out.println("This branch does not exist");
+        }
+
     }
 
 }
