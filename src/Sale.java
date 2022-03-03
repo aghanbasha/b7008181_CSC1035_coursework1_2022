@@ -1,39 +1,49 @@
 public class Sale {
     private String house_number;
     private String postcode;
-    private String value;
-    private String date;
-
-    public Sale(String house_number, String postcode, String value, String date) {
-        this.house_number = house_number;
-        this.postcode = postcode;
-        this.value = value;
-        this.date = date;
-    }
-
-    @Override
-    public String toString() {
-        return "Sale{" +
-                "house_number='" + house_number + '\'' +
-                ", postcode='" + postcode + '\'' +
-                ", value='" + value + '\'' +
-                ", date='" + date + '\'' +
-                '}';
-    }
+    private int value;
+    private String year;
+    private String month;
 
     public String getHouse_number() {
         return house_number;
+    }
+
+    public void setHouse_number(String house_number) {
+        this.house_number = house_number;
     }
 
     public String getPostcode() {
         return postcode;
     }
 
-    public String getValue() {
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
+    }
+
+    public int getValue() {
         return value;
     }
 
-    public String getDate() {
-        return date;
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
+    }
+
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
     }
 }
+
+
