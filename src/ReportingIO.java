@@ -12,10 +12,10 @@ public class ReportingIO {
 
             System.out.println("Enter 1 to add sale data");
             System.out.println("Enter 2 to add branch data");
-            System.out.println("Enter 2 to view the branch with the greatest sale average for a given year");
-            System.out.println("Enter 3 to view the highest sale ever reported");
-            System.out.println("Enter 4 to view all sales greater than a given value");
-            System.out.println("Enter 5 to exit");
+            System.out.println("Enter 3 to view the branch with the greatest sale average for a given year");
+            System.out.println("Enter 4 to view the highest sale ever reported");
+            System.out.println("Enter 5 to view all sales greater than a given value");
+            System.out.println("Enter 6 to exit");
             int user_input_full = user_scan.nextInt();
             if (user_input_full==1){
                 System.out.println("Branch name: ");

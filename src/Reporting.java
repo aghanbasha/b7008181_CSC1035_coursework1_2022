@@ -8,7 +8,7 @@ public class Reporting extends Branch{
         return branches_list;
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Reporting branch_create = new Reporting();
         branch_create.CreateSale("Newcastle", "34","NE18GD",300000,"2013","January");
         branch_create.CreateSale("Newcastle", "87","NE34VJ",180000,"2019","November");
@@ -26,7 +26,7 @@ public class Reporting extends Branch{
         branch_create.addToBranch("London");
         branch_create.GreaterThanAll(15000);
         branch_create.GreatestSaleAll();
-    }
+    }*/
 
     public void setBranches_list(List<String> branches_list) {
         this.branches_list = branches_list;

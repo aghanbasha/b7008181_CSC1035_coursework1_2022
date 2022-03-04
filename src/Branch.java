@@ -56,7 +56,7 @@ public class Branch extends Sale{
 
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Branch branch_create = new Branch();
         branch_create.CreateSale("Newcastle", "34","NE18GD",300000,"2013","January");
         branch_create.CreateSale("Newcastle", "87","NE34VJ",180000,"2019","November");
@@ -69,7 +69,7 @@ public class Branch extends Sale{
         branch_create.GreaterThan(200000,"Durham");
         branch_create.GreatestSale("Newcastle");
         branch_create.SaleAverage("Newcastle", "2019");
-    }
+    }*/
 
 
     public void GreaterThan(int input_value, String branch_name){
