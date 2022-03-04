@@ -17,16 +17,17 @@ public class ReportingIO {
             System.out.println("Enter 5 to view all sales greater than a given value");
             System.out.println("Enter 6 to exit");
             int user_input_full = user_scan.nextInt();
+            boolean entered = false;
             if (user_input_full==1){
                 System.out.println("Branch name: ");
                 user_scan.nextLine();
                 String branch_name = user_scan.nextLine();
                 for (int i = 0; i < branch_create.getBranches_list().size();i++){
                     if (branch_name.equals(branch_create.getBranches_list().get(i))== true){
-                        end = true;
+                        entered = true;
                     }
                 }
-                if (end == false){
+                if (entered == false){
                     System.out.println("Branch does not exist");
                 }
                 else {
@@ -40,7 +41,7 @@ public class ReportingIO {
                     String month = user_scan.nextLine();
                     System.out.println("Value: ");
                     int value = user_scan.nextInt();
-                    branch_create.CreateSale(branch_name, house_number, postcode, Integer.parseInt(year), month, String.valueOf(value));
+                    branch_create.CreateSale(branch_name, house_number, postcode, value, month, year);
                     System.out.println("Data added");
 
                 }

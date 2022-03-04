@@ -52,7 +52,7 @@ public class Branch extends Sale{
         sales_list.add(getYear());
         sales_list.add(getMonth());
         sales_value_list.add(getValue());
-        return;
+
 
     }
 
