@@ -10,7 +10,6 @@ public class Reporting extends Branch{
 
     public static void main(String[] args) {
         Reporting branch_create = new Reporting();
-
         branch_create.CreateSale("Newcastle", "34","NE18GD",300000,"2013","January");
         branch_create.CreateSale("Newcastle", "87","NE34VJ",180000,"2019","November");
         branch_create.CreateSale("Newcastle", "91","NE53SI",140000,"2019","February");

@@ -46,4 +46,5 @@ public class Sale {
     }
 }
 
-
+/**Sale class created. Getters and setters created for each parameter.
+ */
